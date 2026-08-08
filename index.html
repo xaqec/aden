@@ -1,35 +1,477 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aden Dora Karadayı</title>
-  <link rel="stylesheet" href="styles.css">
+  <!-- EDIT: Page title -->
+  <title>Aden — Software Developer</title>
+  <meta name="description" content="Aden is a software developer specializing in building elegant, high-performance digital experiences.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Aden — Software Developer">
+  <meta property="og:description" content="Software developer building elegant, high-performance digital experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/og-image.jpg">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome!</h1>
-  </header>
 
-  <section class="content">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>Project 1</h3>
-        <p>Proje açıklaması burada yer alacak.</p>
+  <!-- Noise texture overlay -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" aria-hidden="true"></div>
+
+  <!-- Loading Screen -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__text">
+      <span style="animation-delay:0.1s">A</span><span style="animation-delay:0.2s">D</span><span style="animation-delay:0.3s">E</span><span style="animation-delay:0.4s">N</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <a href="#hero" class="nav__logo">Aden</a>
+    <div class="nav__links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav__menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <!-- Grid lines -->
+    <div class="hero__grid-lines" aria-hidden="true">
+      <div class="h-line" style="top:20%"></div>
+      <div class="h-line" style="top:50%"></div>
+      <div class="h-line" style="top:80%"></div>
+      <div class="v-line" style="left:15%"></div>
+      <div class="v-line" style="left:85%"></div>
+    </div>
+
+    <!-- Decorative coordinates -->
+    <div class="hero__coords hero__coords--tl" aria-hidden="true">48.8566° N, 2.3522° E</div>
+    <div class="hero__coords hero__coords--br" aria-hidden="true">© 2026 — Portfolio v1.0</div>
+
+    <!-- Decorative shapes -->
+    <div class="hero__shape hero__shape--1" aria-hidden="true"></div>
+    <div class="hero__shape hero__shape--2" aria-hidden="true"></div>
+
+    <!-- Dot pattern -->
+    <div class="hero__dot-pattern" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero__content">
+      <!-- EDIT: Availability label -->
+      <div class="hero__overline">
+        <span class="dot"></span>
+        Available for opportunities
       </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Proje açıklaması burada yer alacak.</p>
+
+      <!-- EDIT: Your name -->
+      <h1 class="hero__name">
+        <span style="animation-delay:0.3s">A</span><span style="animation-delay:0.4s">D</span><span style="animation-delay:0.5s">E</span><span style="animation-delay:0.6s">N</span>
+        <div class="accent-line" aria-hidden="true"></div>
+      </h1>
+
+      <!-- EDIT: Your tagline -->
+      <p class="hero__tagline">
+        Software Developer <span>·</span> Builder <span>·</span> Problem Solver
+      </p>
+
+      <!-- EDIT: Meta information -->
+      <div class="hero__meta">
+        <div class="hero__meta-item">
+          <span class="indicator"></span> Open to work
+        </div>
+        <div class="hero__meta-item">📍 Your City, Country</div>
+        <div class="hero__meta-item">🎓 Computer Science Student</div>
+      </div>
+
+      <!-- EDIT: Social links -->
+      <div class="hero__social">
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:your@email.com">Email ↗</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section" id="about">
+    <div class="about">
+      <div class="section__label reveal">
+        <span>01 — About</span>
+      </div>
+      <div class="section__number" aria-hidden="true">01</div>
+
+      <!-- EDIT: Large statement -->
+      <h2 class="about__statement reveal">
+        I build software with curiosity, precision, and an obsession with turning <em>complex problems</em> into simple, elegant experiences.
+      </h2>
+
+      <div class="about__grid">
+        <!-- EDIT: Biography -->
+        <div class="about__bio reveal">
+          <p>I'm a software developer with a deep passion for creating things that live on the internet. I enjoy working across the full stack, from crafting pixel-perfect interfaces to architecting robust backend systems.</p>
+          <br>
+          <p>Currently pursuing my degree in Computer Science while actively building projects and contributing to open source. I believe the best software is built at the intersection of technical excellence and thoughtful design.</p>
+        </div>
+
+        <!-- EDIT: Details -->
+        <div class="about__details reveal">
+          <div class="about__detail">
+            <div class="about__detail-label">Location</div>
+            <div class="about__detail-value">Your City, Country</div>
+          </div>
+          <div class="about__detail">
+            <div class="about__detail-label">Education</div>
+            <div class="about__detail-value">BSc Computer Science</div>
+          </div>
+          <div class="about__detail">
+            <div class="about__detail-label">Focus</div>
+            <div class="about__detail-value">Full-Stack Development</div>
+          </div>
+          <div class="about__detail">
+            <div class="about__detail-label">Languages</div>
+            <div class="about__detail-value">English, Your Language</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2024 Aden Dora Karadayı. All Rights Reserved.</p>
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== EXPERIENCE ==================== -->
+  <section class="section" id="experience">
+    <div class="experience">
+      <div class="section__label reveal">
+        <span>02 — Experience</span>
+      </div>
+      <div class="section__number" aria-hidden="true">02</div>
+
+      <!-- EDIT: Experience items — duplicate/remove as needed -->
+      <div class="exp-item reveal">
+        <div class="exp-item__year">2026</div>
+        <div class="exp-item__line"></div>
+        <div class="exp-item__content">
+          <div class="exp-item__company">Company Name</div>
+          <div class="exp-item__role">Software Engineer Intern</div>
+          <div class="exp-item__location">City, Country · Jun — Aug 2026</div>
+          <p class="exp-item__desc">Developed and maintained web applications using modern frameworks. Collaborated with cross-functional teams to ship features that improved user engagement by 25%.</p>
+          <div class="exp-item__tech">
+            <span>React</span><span>Node.js</span><span>PostgreSQL</span><span>AWS</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-item__year">2025</div>
+        <div class="exp-item__line"></div>
+        <div class="exp-item__content">
+          <div class="exp-item__company">Another Company</div>
+          <div class="exp-item__role">Frontend Developer</div>
+          <div class="exp-item__location">Remote · Jan — May 2025</div>
+          <p class="exp-item__desc">Built responsive user interfaces and interactive data visualizations. Optimized performance, achieving 95+ Lighthouse scores across all pages.</p>
+          <div class="exp-item__tech">
+            <span>Vue.js</span><span>TypeScript</span><span>D3.js</span><span>Figma</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-item__year">2024</div>
+        <div class="exp-item__line"></div>
+        <div class="exp-item__content">
+          <div class="exp-item__company">Open Source Project</div>
+          <div class="exp-item__role">Core Contributor</div>
+          <div class="exp-item__location">Remote · 2024</div>
+          <p class="exp-item__desc">Contributed to a popular open-source library, implementing new features and fixing critical bugs. Reviewed pull requests and mentored new contributors.</p>
+          <div class="exp-item__tech">
+            <span>Python</span><span>Go</span><span>Docker</span><span>CI/CD</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="section" id="projects">
+    <div class="projects">
+      <div class="section__label reveal">
+        <span>03 — Selected Projects</span>
+      </div>
+      <div class="section__number" aria-hidden="true">03</div>
+
+      <div class="projects__grid">
+        <!-- EDIT: Featured Project -->
+        <article class="project-card project-card--featured reveal">
+          <div class="project-card__number" aria-hidden="true">01</div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">Project Alpha</h3>
+            <p class="project-card__desc">A full-stack web application that helps teams collaborate on complex data pipelines. Features real-time collaboration, visual pipeline builder, and automated deployment.</p>
+            <div class="project-card__tech">
+              <span>React</span><span>Node.js</span><span>WebSocket</span><span>MongoDB</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/project-alpha" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo ↗</a>
+            </div>
+          </div>
+          <div class="project-card__visual">
+            <div class="project-card__visual-inner">
+              <!-- Replace with: <img src="assets/images/project-alpha.jpg" alt="Project Alpha screenshot" loading="lazy"> -->
+              [ PROJECT SCREENSHOT ]
+            </div>
+          </div>
+        </article>
+
+        <!-- EDIT: Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-card__number" aria-hidden="true">02</div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">CLI Toolkit</h3>
+            <p class="project-card__desc">A developer productivity toolkit with intelligent code generation, project scaffolding, and automated documentation. Built with a plugin architecture for extensibility.</p>
+            <div class="project-card__tech">
+              <span>Python</span><span>Click</span><span>SQLite</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/cli-toolkit" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__visual">
+            <div class="project-card__visual-inner">
+              [ PROJECT SCREENSHOT ]
+            </div>
+          </div>
+        </article>
+
+        <!-- EDIT: Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-card__number" aria-hidden="true">03</div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">DataViz Engine</h3>
+            <p class="project-card__desc">An interactive data visualization library for creating custom charts and dashboards. Supports real-time data streams and responsive layouts.</p>
+            <div class="project-card__tech">
+              <span>TypeScript</span><span>Canvas API</span><span>WebGL</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/dataviz" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Demo ↗</a>
+            </div>
+          </div>
+          <div class="project-card__visual">
+            <div class="project-card__visual-inner">
+              [ PROJECT SCREENSHOT ]
+            </div>
+          </div>
+        </article>
+
+        <!-- EDIT: Project 4 -->
+        <article class="project-card reveal">
+          <div class="project-card__number" aria-hidden="true">04</div>
+          <div class="project-card__info">
+            <h3 class="project-card__name">SecureAuth</h3>
+            <p class="project-card__desc">An authentication microservice with OAuth2, JWT tokens, and role-based access control. Includes rate limiting and audit logging.</p>
+            <div class="project-card__tech">
+              <span>Go</span><span>gRPC</span><span>Redis</span><span>PostgreSQL</span>
+            </div>
+            <div class="project-card__links">
+              <a href="https://github.com/yourusername/secureauth" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+          </div>
+          <div class="project-card__visual">
+            <div class="project-card__visual-inner">
+              [ PROJECT SCREENSHOT ]
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="section" id="skills">
+    <div class="skills">
+      <div class="section__label reveal">
+        <span>04 — Technical Skills</span>
+      </div>
+      <div class="section__number" aria-hidden="true">04</div>
+
+      <!-- EDIT: Skills — modify items in each group -->
+      <div class="skills__grid">
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">Languages</h3>
+          <div class="skill-group__list">
+            <div class="skill-group__item">JavaScript / TypeScript</div>
+            <div class="skill-group__item">Python</div>
+            <div class="skill-group__item">Go</div>
+            <div class="skill-group__item">Java</div>
+            <div class="skill-group__item">SQL</div>
+            <div class="skill-group__item">HTML / CSS</div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">Frontend</h3>
+          <div class="skill-group__list">
+            <div class="skill-group__item">React</div>
+            <div class="skill-group__item">Vue.js</div>
+            <div class="skill-group__item">Next.js</div>
+            <div class="skill-group__item">Svelte</div>
+            <div class="skill-group__item">CSS / Sass</div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">Backend</h3>
+          <div class="skill-group__list">
+            <div class="skill-group__item">Node.js</div>
+            <div class="skill-group__item">Express</div>
+            <div class="skill-group__item">Django</div>
+            <div class="skill-group__item">FastAPI</div>
+            <div class="skill-group__item">REST / GraphQL</div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">Databases</h3>
+          <div class="skill-group__list">
+            <div class="skill-group__item">PostgreSQL</div>
+            <div class="skill-group__item">MongoDB</div>
+            <div class="skill-group__item">Redis</div>
+            <div class="skill-group__item">SQLite</div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">DevOps & Tools</h3>
+          <div class="skill-group__list">
+            <div class="skill-group__item">Git</div>
+            <div class="skill-group__item">Docker</div>
+            <div class="skill-group__item">AWS / GCP</div>
+            <div class="skill-group__item">CI/CD</div>
+            <div class="skill-group__item">Linux</div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group__title">Other</h3>
+          <div class="skill-group__list">
+            <div class="skill-group__item">System Design</div>
+            <div class="skill-group__item">Agile / Scrum</div>
+            <div class="skill-group__item">UI/UX Design</div>
+            <div class="skill-group__item">Technical Writing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== EDUCATION ==================== -->
+  <section class="section" id="education">
+    <div class="education">
+      <div class="section__label reveal">
+        <span>05 — Education</span>
+      </div>
+      <div class="section__number" aria-hidden="true">05</div>
+
+      <!-- EDIT: Education items -->
+      <div class="edu-item reveal">
+        <div class="edu-item__dates">2023 — 2027</div>
+        <div>
+          <div class="edu-item__school">University Name</div>
+          <div class="edu-item__degree">Bachelor of Science in Computer Science</div>
+          <div class="edu-item__details">
+            <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Operating Systems, Database Systems, Software Engineering, Machine Learning, Computer Networks<br><br>
+            <strong>Achievements:</strong> Dean's List, Hackathon Winner 2025, Teaching Assistant for Intro to CS
+          </div>
+        </div>
+      </div>
+
+      <div class="edu-item reveal">
+        <div class="edu-item__dates">2024</div>
+        <div>
+          <div class="edu-item__school">Certification</div>
+          <div class="edu-item__degree">AWS Certified Cloud Practitioner</div>
+          <div class="edu-item__details">
+            <strong>Focus:</strong> Cloud architecture, serverless computing, infrastructure as code
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section" id="contact">
+    <div class="contact">
+      <div class="section__label reveal" style="justify-content: center;">
+        <span>06 — Contact</span>
+      </div>
+
+      <h2 class="contact__heading reveal">
+        LET'S BUILD<br>SOMETHING<em>.</em>
+      </h2>
+
+      <p class="contact__sub reveal">
+        I'm always interested in hearing about new projects, collaborations, and opportunities. Let's connect.
+      </p>
+
+      <!-- EDIT: Contact links -->
+      <div class="contact__links reveal">
+        <a href="mailto:your@email.com">Email ↗</a>
+        <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <span>© 2026 Aden</span>
+    <span>Designed & Built by Aden</span>
   </footer>
 
-  <script src="scripts.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
