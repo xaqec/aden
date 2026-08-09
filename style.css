@@ -50,7 +50,7 @@ button { font-family: inherit; cursor: none; border: none; background: none; }
 /* ========================================
    CUSTOM CURSOR
    ======================================== */
-.cursor { position: fixed; top: 0; left: 0; width: 12px; height: 12px; border: 3px solid var(--color-text); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width var(--transition-fast), height var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast); mix-blend-mode: difference; }
+.cursor { position: fixed; top: 0; left: 0; width: 12px; height: 12px; border: 7px solid var(--color-text); border-radius: 50%; pointer-events: none; z-index: 9999; transform: translate(-50%, -50%); transition: width var(--transition-fast), height var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast); mix-blend-mode: difference; }
 .cursor.cursor--hover { width: 40px; height: 40px; border-color: var(--color-accent); background: rgba(212,165,165,0.15); }
 .cursor.cursor--project { width: 60px; height: 60px; border-color: var(--color-accent); }
 
